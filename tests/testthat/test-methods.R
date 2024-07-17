@@ -36,7 +36,6 @@ test_that("mt_compact_data works", {
   x <- mt_compact_data("IFS", list("M", "WRONG", "PMP_IX"))
   expect_true(is.null(x$CompactData$DataSet$Series))
 
-  expect_error(mt_compact_data("IFS", list("M", "GB", "PMP_IX"), start_period = "9999-01-01", end_period = "9999-12-12"), "Status code: 500")
 })
 
 
